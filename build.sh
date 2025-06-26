@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build --tag bd-tarea1 .
+docker build --tag bd-tarea2 .

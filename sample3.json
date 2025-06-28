@@ -3,22 +3,80 @@
     "compras": [
         [
             {
-                "nombre": "manzana",
-                "cantidad": "3",
-                "precio_unitario": "22"
+                "nombre": "leche",
+                "cantidad": "2",
+                "precio_unitario": "2000"
             },
             {
-                "nombre": "arroz",
-                "cantidad": "2",
-                "precio_unitario": "33"
+                "nombre": "mani",
+                "cantidad": "10",
+                "precio_unitario": "130"
             }
         ],
         [
             {
-                "nombre": "aguacate",
-                "cantidad": "1",
-                "precio_unitario": "5000"
+                "nombre": "Krunchy",
+                "cantidad": "3",
+                "precio_unitario": "950"
             }
         ]
+        ,
+        [
+            {
+                "nombre": "chile dulce",
+                "cantidad": "9",
+                "precio_unitario": "205"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "apio",
+                "cantidad": "5",
+                "precio_unitario": "37"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "toreaditos",
+                "cantidad": "3",
+                "precio_unitario": "1150"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "salchicha",
+                "cantidad": "7",
+                "precio_unitario": "250"
+            }
+        ]
+
+        ,
+        [
+            {
+                "nombre": "cereal",
+                "cantidad": "2",
+                "precio_unitario": "1400"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "harina",
+                "cantidad": "6",
+                "precio_unitario": "1275"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "margarina",
+                "cantidad": "2",
+                "precio_unitario": "2150"
+            }
+        ]
+
     ]
 }

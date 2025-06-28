@@ -1,24 +1,82 @@
 {
-    "numero_caja": "45",
+    "numero_caja": "24",
     "compras": [
         [
             {
-                "nombre": "manzana",
+                "nombre": "chocolate blanco",
                 "cantidad": "3",
-                "precio_unitario": "22"
+                "precio_unitario": "750"
             },
             {
-                "nombre": "arroz",
-                "cantidad": "2",
-                "precio_unitario": "33"
+                "nombre": "zepol",
+                "cantidad": "4",
+                "precio_unitario": "175"
             }
         ],
         [
             {
-                "nombre": "aguacate",
-                "cantidad": "1",
-                "precio_unitario": "5000"
+                "nombre": "acetaminofen",
+                "cantidad": "3",
+                "precio_unitario": "950"
             }
         ]
+        ,
+        [
+            {
+                "nombre": "famotidina",
+                "cantidad": "12",
+                "precio_unitario": "50"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "sprite",
+                "cantidad": "2",
+                "precio_unitario": "1250"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "yogurt",
+                "cantidad": "2",
+                "precio_unitario": "1208"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "banano",
+                "cantidad": "5",
+                "precio_unitario": "95"
+            }
+        ]
+
+        ,
+        [
+            {
+                "nombre": "dips",
+                "cantidad": "4",
+                "precio_unitario": "850"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "alcohol",
+                "cantidad": "1",
+                "precio_unitario": "2500"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "zanahoria",
+                "cantidad": "5",
+                "precio_unitario": "135"
+            }
+        ]
+
     ]
 }

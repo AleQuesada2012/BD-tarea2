@@ -1,24 +1,82 @@
 {
-    "numero_caja": "45",
+    "numero_caja": "27",
     "compras": [
         [
             {
-                "nombre": "manzana",
+                "nombre": "imperial",
                 "cantidad": "3",
-                "precio_unitario": "22"
+                "precio_unitario": "1000"
             },
             {
-                "nombre": "arroz",
+                "nombre": "papel higienico",
                 "cantidad": "2",
-                "precio_unitario": "33"
+                "precio_unitario": "1750"
             }
         ],
         [
             {
-                "nombre": "aguacate",
-                "cantidad": "1",
-                "precio_unitario": "5000"
+                "nombre": "jabon en barra",
+                "cantidad": "2",
+                "precio_unitario": "750"
             }
         ]
+        ,
+        [
+            {
+                "nombre": "consome de pollo",
+                "cantidad": "12",
+                "precio_unitario": "150"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "cremitas",
+                "cantidad": "3",
+                "precio_unitario": "350"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "leche en polvo",
+                "cantidad": "2",
+                "precio_unitario": "1200"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "sirope",
+                "cantidad": "3",
+                "precio_unitario": "950"
+            }
+        ]
+
+        ,
+        [
+            {
+                "nombre": "hielo",
+                "cantidad": "3",
+                "precio_unitario": "1000"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "dulce de leche",
+                "cantidad": "1",
+                "precio_unitario": "2500"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "pan bimbo",
+                "cantidad": "2",
+                "precio_unitario": "1050"
+            }
+        ]
+
     ]
 }

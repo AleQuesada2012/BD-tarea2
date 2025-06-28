@@ -1,24 +1,82 @@
 {
-    "numero_caja": "45",
+    "numero_caja": "03",
     "compras": [
         [
             {
-                "nombre": "manzana",
-                "cantidad": "3",
-                "precio_unitario": "22"
+                "nombre": "paprika",
+                "cantidad": "2",
+                "precio_unitario": "750"
             },
             {
-                "nombre": "arroz",
-                "cantidad": "2",
-                "precio_unitario": "33"
+                "nombre": "culantro",
+                "cantidad": "4",
+                "precio_unitario": "489"
             }
         ],
         [
             {
-                "nombre": "aguacate",
-                "cantidad": "1",
-                "precio_unitario": "5000"
+                "nombre": "salsa lizano",
+                "cantidad": "2",
+                "precio_unitario": "1375"
             }
         ]
+        ,
+        [
+            {
+                "nombre": "pimienta",
+                "cantidad": "8",
+                "precio_unitario": "305"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "natilla",
+                "cantidad": "3",
+                "precio_unitario": "850"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "flor de caña",
+                "cantidad": "2",
+                "precio_unitario": "10000"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "cebolla",
+                "cantidad": "7",
+                "precio_unitario": "135"
+            }
+        ]
+
+        ,
+        [
+            {
+                "nombre": "chicles",
+                "cantidad": "8",
+                "precio_unitario": "550"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "chirulitos",
+                "cantidad": "9",
+                "precio_unitario": "250"
+            }
+        ]
+        ,
+        [
+            {
+                "nombre": "tronaditas",
+                "cantidad": "7",
+                "precio_unitario": "275"
+            }
+        ]
+
     ]
 }

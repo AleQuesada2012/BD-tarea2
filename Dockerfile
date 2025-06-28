@@ -11,5 +11,10 @@ RUN apk add bash && \
   pip3 install faker && \
   ln /usr/bin/python3.7 /usr/bin/python
 
-WORKDIR /src
+
+#RUN ln -s ${SPARK_HOME}/bin/spark-submit /usr/bin/spark-submit
+
+WORKDIR /src 
 COPY . /src
+
+#RUN chmod +x run-program.sh

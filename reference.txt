@@ -1,0 +1,3 @@
+https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.DataFrameReader.json.html
+https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.RDD.html
+https://stackoverflow.com/questions/33742895/how-to-show-full-column-content-in-a-spark-dataframe

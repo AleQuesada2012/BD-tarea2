@@ -1,55 +1,55 @@
 {
-    "numero_caja": "45",
+    "numero_caja": 45,
     "compras": [
         [
             {
                 "nombre": "manzana",
-                "cantidad": "7",
-                "precio_unitario": "22"
+                "cantidad": 7,
+                "precio_unitario": 22
             },
             {
                 "nombre": "arroz",
-                "cantidad": "10",
-                "precio_unitario": "33"
+                "cantidad": 10,
+                "precio_unitario": 33
             }
         ],
         [
             {
                 "nombre": "aguacate",
-                "cantidad": "1",
-                "precio_unitario": "5000"
+                "cantidad": 1,
+                "precio_unitario": 5000
             }
         ]
         ,
         [
             {
                 "nombre": "coca cola",
-                "cantidad": "2",
-                "precio_unitario": "1200"
+                "cantidad": 2,
+                "precio_unitario": 1200
             }
         ]
         ,
         [
             {
                 "nombre": "tomate",
-                "cantidad": "5",
-                "precio_unitario": "40"
+                "cantidad": 5,
+                "precio_unitario": 40
             }
         ]
         ,
         [
             {
                 "nombre": "vainica",
-                "cantidad": "8",
-                "precio_unitario": "20"
+                "cantidad": 8,
+                "precio_unitario": 20
             }
         ]
         ,
         [
             {
                 "nombre": "tortillas",
-                "cantidad": "2",
-                "precio_unitario": "1950"
+                "cantidad": 2,
+                "precio_unitario": 1950
             }
         ]
 
@@ -57,24 +57,24 @@
         [
             {
                 "nombre": "frijoles",
-                "cantidad": "1",
-                "precio_unitario": "1400"
+                "cantidad": 1,
+                "precio_unitario": 1400
             }
         ]
         ,
         [
             {
                 "nombre": "salchichon",
-                "cantidad": "3",
-                "precio_unitario": "1200"
+                "cantidad": 3,
+                "precio_unitario": 1200
             }
         ]
         ,
         [
             {
                 "nombre": "garbanzos",
-                "cantidad": "2",
-                "precio_unitario": "3100"
+                "cantidad": 2,
+                "precio_unitario": 3100
             }
         ]
 

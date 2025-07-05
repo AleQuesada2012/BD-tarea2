@@ -1,8 +1,4 @@
-spark-submit programaestudiante.py atleta.csv nadar.csv correr.csv
+#!bin/bash
+spark-submit programaestudiante.py *.json
 
-pytest
-
-# spark-submit /src/programaestudiante.py /datos/sample1.json /datos/sample2.json /datos/sample3.json /datos/sample4.json /datos/sample5.json
-
-#!/bin/bash
-spark-submit /app/programaestudiante.py \/datos/sample1.json \/datos/sample2.json \/datos/sample3.json \/datos/sample4.json \/datos/sample5.json
+#pytest

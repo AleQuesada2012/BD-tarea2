@@ -49,3 +49,7 @@ df_final.show(df_final.count())
 print(f"cantidad de compras: {df_final.count()}")
 
 generar_csv.total_productos(df_final)
+
+generar_csv.total_vendido_caja(df_final)
+
+generar_csv.generar_metricas(df_final)

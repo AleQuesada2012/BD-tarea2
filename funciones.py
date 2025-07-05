@@ -4,6 +4,7 @@ from pyspark.sql import DataFrame
 def normalizar(df):
     # Explode outer array
     df_exploded_outer = df.withColumn("compra_group", explode(col("compras")))
+    
 
 # Explode inner array
     df_exploded_inner = df_exploded_outer.withColumn("compra", explode(col("compra_group")))

@@ -31,9 +31,9 @@
         ,
         [
             {
-                "nombre": "apio",
-                "cantidad": "5",
-                "precio_unitario": "37"
+                "nombre": "salchichon",
+                "cantidad": 2,
+                "precio_unitario": 1200
             }
         ]
         ,

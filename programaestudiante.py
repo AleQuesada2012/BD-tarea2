@@ -38,7 +38,6 @@ normalizados = []
 for datafa in dataframes:
     newDF = funcs.normalizar(datafa)
     normalizados.append(newDF)
-    #newDF.show(truncate=False)
 
 
 
@@ -46,10 +45,23 @@ df_final = funcs.unificar(normalizados)
 df_final.printSchema()
 df_final.show(df_final.count())
 
-print(f"cantidad de compras: {df_final.count()}")
+# ya con ese DF con toda la info se sacan los necesarios para los CSVs
+df_tot_prods = funcs.calcular_total_productos(df_final)
+print("tabla (DF) para cada producto y su total")
+df_tot_prods.show()
 
-generar_csv.total_productos(df_final)
+df_tot_cajas = funcs.calcular_total_vendido_caja(df_final)
+print("Tabla (DF) para cada caja y su total de ventas")
+df_tot_cajas.show()
 
-generar_csv.total_vendido_caja(df_final)
 
-generar_csv.generar_metricas(df_final)
+df_metricas = funcs.calcular_metricas(df_final, spark)
+print("Tabla de metricas")
+df_metricas.show()
+
+
+generar_csv.generar_archivo1(df_tot_prods)
+
+generar_csv.generar_archivo2(df_tot_cajas)
+
+generar_csv.generar_archivo3(df_metricas)

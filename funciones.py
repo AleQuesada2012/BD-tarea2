@@ -1,5 +1,27 @@
 from pyspark.sql.functions import col, explode, sum
 from pyspark.sql import DataFrame
+import json
+
+
+def leer_json(argv):
+    json_list = []
+    for file in argv:
+        with open(file, 'r') as current_json:
+            try:
+                json.load(current_json) # con esto se valida el formato
+                json_list.append(file)
+            except json.JSONDecodeError:
+                print(f"El archivo {file} es un JSON de formato no valido; no fue cargado a memoria.")        
+            current_json.close()
+    return json_list
+
+def cargar_json(lista_nombres, spark):
+    dataframes = []
+    for json_file in lista_nombres:
+        df = spark.read.option("multiLine", "true").json(json_file)
+        dataframes.append(df)
+    return dataframes
+
 
 def normalizar(df):
     # Separación del grupo de compras
@@ -13,14 +35,14 @@ def normalizar(df):
         col("numero_caja"),
         col("compra.nombre").alias("producto"),
         col("compra.cantidad").cast("int").alias("cantidad"),
-        col("compra.precio_unitario").cast("int").alias("precio unitario")
+        col("compra.precio_unitario").cast("int").alias("precio_unitario")
     )
 
     return final_df
 
 
 
-def unificar(list_df: list):
+def unificar(list_df: list) -> DataFrame:
     unified_df = list_df[0]
     for df in list_df[1:]:
         unified_df = unified_df.union(df)
@@ -34,7 +56,7 @@ ahora en las que hay acá abajo solo se crea el DF, y en las que hay en generar_
 generarlo como archivo
 """
 
-def calcular_total_productos(df_final : DataFrame):
+def calcular_total_productos(df_final : DataFrame) -> DataFrame:
     df_productos = df_final.groupBy("producto").agg(
         sum("cantidad").alias("total_comprado")
     )
@@ -43,10 +65,15 @@ def calcular_total_productos(df_final : DataFrame):
 
 
 def calcular_total_vendido_caja(df_final : DataFrame):
-    df_vendidos = df_final.groupBy("numero_caja").agg(
-        sum("precio unitario").alias("total_vendido")
+
+    df_con_ingreso = df_final.withColumn(
+        "ingreso", 
+        col("cantidad") * col("precio_unitario")
     )
-    #save_as_csv(df_vendidos, "total_vendidos.csv")
+    
+    df_vendidos = df_con_ingreso.groupBy("numero_caja").agg(
+        sum("ingreso").alias("total_vendido")
+    )
     return df_vendidos
 
 
@@ -80,7 +107,7 @@ def calc_prod_mas_vendido(df_final):
 def calc_prod_mayor_ingreso(df_final):
     # Producto con mayor ingreso (dinero)
     df_ingresos = df_final.withColumn(
-        "ingreso", col("cantidad") * col("precio unitario")
+        "ingreso", col("cantidad") * col("precio_unitario")
     ).groupBy("producto").agg(sum("ingreso").alias("total_ingreso"))
 
     prod_mayor_ingreso = df_ingresos.orderBy(col("total_ingreso").desc()).first()[0]

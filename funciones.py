@@ -131,9 +131,9 @@ def calcular_metricas(df_final, spark_sesh):
     metricas_data = [
         ("caja_con_mas_ventas", str(caja_max)),
         ("caja_con_menos_ventas", str(caja_min)),
-        ("percentil_25_por_caja", str(percentiles[0])),
-        ("percentil_50_por_caja", str(percentiles[1])),
-        ("percentil_75_por_caja", str(percentiles[2])),
+        ("percentil_25_por_caja", (percentiles[0])),
+        ("percentil_50_por_caja", (percentiles[1])),
+        ("percentil_75_por_caja", (percentiles[2])),
         ("producto_mas_vendido_por_unidad", producto_mas_vendido),
         ("producto_de_mayor_ingreso", producto_mayor_ingreso)
     ]

@@ -36,7 +36,7 @@ def mock_total_productos(dataframe_unificado) -> DataFrame:
     return funciones.calcular_total_productos(dataframe_unificado)
 
 
-def test_productos(dataframes_productos: list[DataFrame]):
+def test_productos(dataframes_productos):
     for df in dataframes_productos:
         assert(df.columns == ["compras", "numero_caja"])
         assert(len(df.collect()) > 0)
@@ -51,14 +51,14 @@ def test_cant_dfs_creados():
 
 
 
-def test_cant_compras(dataframes_normalizados: list[DataFrame]):
+def test_cant_compras(dataframes_normalizados):
     total = 0
     for df in dataframes_normalizados:
         total += df.count()
     assert total >= 50, f"Hay {total} compra(s) en los datos, se esperan al menos 50"
 
 
-def test_columnas_esperadas(dataframes_normalizados: list[DataFrame]):
+def test_columnas_esperadas(dataframes_normalizados):
     columnas = ["numero_caja", "producto", "cantidad", "precio_unitario"]
     todos_bien = True
     for df in dataframes_normalizados:
@@ -67,7 +67,7 @@ def test_columnas_esperadas(dataframes_normalizados: list[DataFrame]):
             raise AssertionError("las columnas de un dataframe no cumplen el formato esperado")
     assert todos_bien, "se espera que las columnas cumplan el formato al ser expandidos los datos"
 
-def test_misma_caja_cada_fila(dataframes_normalizados: list[DataFrame]):
+def test_misma_caja_cada_fila(dataframes_normalizados):
     cajas_esperadas = True
     for df in dataframes_normalizados:
         filas = df.collect()
@@ -78,7 +78,7 @@ def test_misma_caja_cada_fila(dataframes_normalizados: list[DataFrame]):
                 raise AssertionError("Todas las compras de un archivo deben estar asociadas a la misma caja")
     assert cajas_esperadas, f"Los datos vienen con las compras asociados a una tabla por archivo: {cajas_esperadas}"
 
-def test_ningun_producto_en_cero(dataframes_normalizados: list[DataFrame]):
+def test_ningun_producto_en_cero(dataframes_normalizados):
     productos_en_cero = 0
     for df in dataframes_normalizados:
         for fila in df.collect():
@@ -88,7 +88,7 @@ def test_ningun_producto_en_cero(dataframes_normalizados: list[DataFrame]):
     assert productos_en_cero == 0, f"Se esperan 0 productos con 0 o menos de cantidad, se recibieron: {productos_en_cero}"
 
 
-def test_ningun_precio_cero(dataframes_normalizados: list[DataFrame]):
+def test_ningun_precio_cero(dataframes_normalizados):
     precios_erroneos = 0
     for df in dataframes_normalizados:
         for fila in df.collect():
@@ -101,7 +101,7 @@ def test_ningun_precio_cero(dataframes_normalizados: list[DataFrame]):
 def test_todos_presentes_en_datos(dataframe_unificado, mock_total_productos):
     for fila in mock_total_productos.collect():
         if dataframe_unificado.filter(dataframe_unificado.producto == fila["producto"]).count() < 1:
-            raise AssertionError(f"El producto {fila["producto"]} del total de productos no se encuentra en los datos")
+            raise AssertionError(f"El producto esperado no se encuentra en los datos")
 
 
 def test_columnas_resultante(mock_total_productos: DataFrame):

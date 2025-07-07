@@ -3,4 +3,4 @@
 # y el contenedor es una imagen de linux
 spark-submit programaestudiante.py *.json
 
-#pytest
+pytest
